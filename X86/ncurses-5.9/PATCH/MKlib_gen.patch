@@ -1,0 +1,10 @@
+--- ./ncurses/base/MKlib_gen.sh	2011-01-23 03:47:29.000000000 +0800
++++ ./ncurses/base/MKlib_gen.sh	2016-08-28 12:49:57.395444047 +0800
+@@ -442,6 +442,7 @@
+ 	-e 's/  / /g' \
+ 	-e 's/^ //' \
+ 	-e 's/_Bool/NCURSES_BOOL/g' \
++        -e 's/mouse_trafo (/(mouse_trafo) (/g' \
+ | $AWK -f $AW2 \
+ | sed -f $ED3 \
+ | sed \
