@@ -23,10 +23,12 @@ if [ ! -d $TARGET/ncurses-5.9 ]; then
 
     cd $TARGET/ncurses-5.9/
     patch -Np1 -d $TARGET/ncurses-5.9/ < $CURDIR/PATCH/MKlib_gen.patch
-
+    
+    CPPFLAGS="-P" \
     ./configure \
        --prefix=$OBJ/ \
        --with-shared \
+       --without-cxx-binding \
 
     make
     make install
