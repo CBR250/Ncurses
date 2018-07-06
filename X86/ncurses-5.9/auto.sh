@@ -29,6 +29,7 @@ if [ ! -d $TARGET/ncurses-5.9 ]; then
        --prefix=$OBJ/ \
        --with-shared \
        --without-cxx-binding \
+       --with-termlib \
 
     make
     make install
